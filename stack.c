@@ -61,7 +61,7 @@ void push_stack(struct Stack *stack, int v)
     stack->top = newItem;
 }
 
-int is_empty_stack(struct Stack *stack)
+bool is_empty_stack(struct Stack *stack)
 {
     if (stack == NULL)
     {

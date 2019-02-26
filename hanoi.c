@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "stack.h"
 
 #define NUM_TOWERS 3
-#define NUM_DISCS 15
+#define NUM_DISCS 3
 
 void print_towers(struct Stack **towers);
-int is_final_state(struct Stack **towers);
+bool is_final_state(struct Stack **towers);
 void move_smallest(struct Stack **towers);
 void move_non_smallest(struct Stack **towers);
 
@@ -68,7 +69,7 @@ void print_towers(struct Stack **towers)
     printf("--------------\n");
 }
 
-int is_final_state(struct Stack **towers)
+bool is_final_state(struct Stack **towers)
 {
     for (int i = 0; i < NUM_TOWERS - 1; i++)
         if (!is_empty_stack(towers[i]))
