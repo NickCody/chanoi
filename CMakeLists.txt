@@ -8,4 +8,4 @@ include_directories(.)
 add_executable(hanoi
         hanoi.c
         stack.c
-        stack.h)
+        stack.h iterative.c iterative.h)
